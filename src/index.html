@@ -77,9 +77,12 @@
 
 		<div class="main">
 			@@include('./html/header.html')
-      <main></main>
+      <main class="content">
+        @@include(./html/best-offers.html)
+      </main>
       @@include('./html/footer.html')
-    <script src="js/app.min.js"></script>
+      @@include('./html/template-best-offer.html')
+      <script src="js/app.min.js"></script>
 		</div>
 </body>
 </html>
