@@ -1,11 +1,41 @@
 <form class="form-credit" id="form-credit">
   <label class="form-credit__label" for="sum">
-    <span class="form-credit__label-title">Cумма кредита</span>
-    <input type="range" class="form-credit__range" id="sum">
+    <p class="form-credit__label-title">Cумма кредита</p>
+    <p class="form-credit__range-value form-credit__range-value_sum">
+      69 000 ₽
+    </p>
+    <input
+      step="1000"
+      type="range"
+      class="form-credit__range form-credit__range_sum"
+      id="sum"
+      min="1000"
+      max="100000"
+      value="69000"
+    >
+    <p class="form-credit__caption">
+      <span>1 000 ₽</span>
+      <span>100 000 ₽</span>
+    </p>
   </label>
   <label class="form-credit__label" for="time">
-    <span class="form-credit__label-title">Cрок кредита</span>
-    <input type="range" class="form-credit__range" id="time">
+    <p class="form-credit__label-title">Cрок кредита</p>
+    <p class="form-credit__range-value form-credit__range-value_time">
+      8 дней
+    </p>
+    <input
+      type="range"
+      step="1"
+      class="form-credit__range form-credit__range_time"
+      id="time"
+      min="3"
+      max="30"
+      value="8"
+    >
+    <p class="form-credit__caption">
+      <span>3</span>
+      <span>30</span>
+    </p>
   </label>
   <button type="submit" class="button">Оформить заявку</button>
   <fieldset class="form-credit__calc">

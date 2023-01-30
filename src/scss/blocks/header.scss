@@ -1,0 +1,85 @@
+.header {
+  background-image: url(../img/header-background.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas:
+  'navigation navigation'
+  'title form-credit';
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 68px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position-x: -70px;
+
+  &__navigation {
+    grid-area: navigation;
+    margin: 32px auto;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    height: min-content;
+    max-width: 480px;
+    width: 100%;
+    justify-self: end;
+    grid-area: title;
+    margin: 150px auto 0 33%;
+  }
+
+  &__title-button {
+    box-sizing: border-box;
+    font-size: 22px;
+    line-height: 1.18;
+    text-transform: uppercase;
+    color: $colorDark;
+    font-weight: 500;
+    border: none;
+    padding: 15px 23px 15px 75px;
+    width: 382px;
+    @include whiteRectangle;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: url(../img/icon-fire.svg);
+      position: absolute;
+      left: 8px;
+      bottom: 4px;
+    }
+  }
+
+  &__subtitle {
+    @include resetMargin;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 133.5%;
+    color: $colorWhite;
+  }
+
+  &__notice {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 145.5%;
+    @include resetMargin;
+    color: $colorWhite;
+    margin-top: 110px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  &__woman-img {
+    position: absolute;
+    bottom: 0;
+    left: 37%;
+  }
+}

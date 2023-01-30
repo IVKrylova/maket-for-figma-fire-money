@@ -1,30 +1,32 @@
 <header class="header">
-  <a href="#" class="link-to-main-page">
-    <img class="logo-firemoney" src="./img/logo-FireMoney.svg" alt="Логотип Fire Money">
-  </a>
-  <nav class="menu">
-    <ul class="menu__list-link">
-      <li>
-        <a class="menu__link" href="#">Почему мы?</a>
-      </li>
-      <li>
-        <a class="menu__link" href="#">О сервисе</a>
-      </li>
-      <li>
-        <a class="menu__link" href="#">Вопросы-ответы</a>
-      </li>
-    </ul>
-  </nav>
-  <button type="button" class="button button_gradient_false">входа в личный кабинет</button>
+  <div class="header__navigation">
+    <a href="#" class="link-to-main-page">
+      <img class="logo-firemoney" src="./img/logo-FireMoney.svg" alt="Логотип Fire Money">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list-link">
+        <li>
+          <a class="menu__link" href="#reviews">Почему мы?</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#about-servise">О сервисе</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#faq">Вопросы-ответы</a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="button button_gradient_false">войти в личный кабинет</button>
+  </div>
   <div class="header__title">
     <button class="header__title-button" type="button">Горячие предложения</button>
     <h1 class="h1">быстрых займов по всей России!</h1>
     <p class="header__subtitle">Без проверки кредитной истории.</p>
     <p class="header__subtitle">От 1 000 ₽ за 15 минут.</p>
+    <p class="header__notice">
+      Внимание! Услуга обработки заявки платная и составляет от 98 ₽ до 398 ₽ раз в неделю
+    </p>
   </div>
-  <p class="header__notice">
-    Внимание! Услуга обработки заявки платная и составляет от 98 ₽ до 398 ₽ раз в неделю
-  </p>
   <img class="header__woman-img" alt="Девушка с телефоном" src="./img/header-woman.png">
-  @@include('./form.html')
+  @@include('./form-credit.html')
 </header>

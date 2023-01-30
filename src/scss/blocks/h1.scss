@@ -1,3 +1,10 @@
 .h1 {
-
+  @include resetMargin;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 111.5%;
+  text-transform: uppercase;
+  color: $colorWhite;
+  width: 100%;
+  margin: 20px 0 15px;
 }
