@@ -1,0 +1,9 @@
+.h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #45515F;
+  max-width: 400px;
+  @include resetMargin;
+  margin-bottom: 30px;
+}
