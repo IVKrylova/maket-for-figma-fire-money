@@ -54,3 +54,35 @@ export const reviews = [
     id: 2,
   },
 ];
+
+export const clientsRejeckt = [
+  {
+    id: 0,
+    name: 'Екатерина Романова',
+    gender: 'woman',
+    timeAction: '45 сек',
+    location: 'г. Москва',
+  },
+];
+
+export const clientsSuccess = [
+  {
+    id: 0,
+    name: 'Игорь Николаев',
+    gender: 'man',
+    timeAction: '2 мин',
+    location: 'г. Москва',
+    sum: '5 000 ₽',
+  },
+];
+
+export const clientsPaid = [
+  {
+    id: 0,
+    name: 'Светлана Борисовна',
+    gender: 'woman',
+    timeAction: '45 сек',
+    location: 'г. Москва',
+    sum: '12 000 ₽',
+  },
+];

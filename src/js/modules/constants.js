@@ -13,3 +13,8 @@ export const bestOffersListSelector ='.best-offers__list';
 export const reviewSelector = '.review';
 export const reviewTemplateSelector = '#template-review';
 export const reviewsListSelector ='.reviews__list';
+
+/* clients */
+export const clientRejeckt = document.querySelector('.clients__person_rejeckt');
+export const clientSuccess = document.querySelector('.clients__person_success');
+export const clientPaid = document.querySelector('.clients__person_paid');

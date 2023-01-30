@@ -13,10 +13,16 @@ import {
   reviewSelector,
   reviewTemplateSelector,
   reviewsListSelector,
+  clientRejeckt,
+  clientSuccess,
+  clientPaid,
 } from './modules/constants.js';
 import {
   bestOffers,
   reviews,
+  clientsRejeckt,
+  clientsSuccess,
+  clientsPaid,
 } from './modules/data.js';
 
 utils.isWebp();
@@ -71,3 +77,31 @@ const createReview = data => {
 }
 
 createReview(reviews);
+
+/* clients */
+const createClient = (data, clientElement, action) => {
+  const client = data[data.length - 1];
+  const nameElement = clientElement.querySelector('.clients__name');
+  const actionElement = clientElement.querySelector('.clients__action');
+  const locationElement = clientElement.querySelector('.location__city');
+
+  nameElement.textContent = client.name;
+  if (action === 'rejeckt') {
+    actionElement.textContent = client.gender === 'woman'
+      ? `Получила отказ ${client.timeAction} назад`
+      : `Получил отказ ${client.timeAction} назад`;
+  } else if (action === 'success') {
+    actionElement.textContent = client.gender === 'woman'
+      ? `Взяла ${client.sum} ${client.timeAction} назад`
+      : `Взял ${client.sum} ${client.timeAction} назад`;
+  } else {
+    actionElement.textContent = client.gender === 'woman'
+      ? `Внесла на счет ${client.sum} ${client.timeAction} назад`
+      : `Внес на счет ${client.sum} ${client.timeAction} назад`;
+  }
+  locationElement.textContent = client.location;
+}
+
+createClient(clientsRejeckt, clientRejeckt, 'rejeckt');
+createClient(clientsSuccess, clientSuccess, 'success');
+createClient(clientsPaid, clientPaid, 'paid');

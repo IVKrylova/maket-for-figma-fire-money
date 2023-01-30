@@ -1,0 +1,53 @@
+.clients {
+  @include gridColumns1fr;
+  padding: 55px 0 65px;
+  width: 100%;
+  background-image: url(../img/clients-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__list {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;
+    column-gap: 27px;
+    margin-top: 37px;
+  }
+
+  &__person {
+    min-width: 408px;
+    width: max-content;
+    @include whiteRectangle;
+    box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+    border-radius: 22px;
+    padding: 25px 36px 25px 75px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: calc(50% - 14px);
+    left: 25px;
+  }
+
+  &__name {
+    @include resetMargin;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #45515F;
+  }
+
+  &__action {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #536473;
+    @include resetMargin;
+    padding-top: 6px;
+    max-width: 300px;
+    width: 100%;
+  }
+}
