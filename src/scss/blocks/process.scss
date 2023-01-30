@@ -1,0 +1,116 @@
+.process {
+  background-color: $bgGrey;
+  padding: 45px 0;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  display: grid;
+  justify-items: center;
+  position: relative;
+
+  &::before {
+    border: 1px solid rgba(69, 81, 95, 0.05);
+    content: '';
+    position: absolute;
+    max-width: 1280px;
+    width: 100%;
+    top: 0;
+  }
+
+  &__list {
+    @include resetMargin;
+    list-style-type: none;
+    display: grid;
+    max-width: 1280px;
+    width: 100%;
+    align-items: center;
+    margin: 50px auto 40px;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 248px;
+    width: 100%;
+  }
+
+  &__icon {
+    display: block;
+    width: 68px;
+    height: 77px;
+  }
+
+  &__point {
+    width: 34px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    @include resetMargin;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145.5%;
+    padding: 6px 0;
+    color: #D6D3D3;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 7px;
+      background-color: #fff;
+      border-radius: 8px;
+      position: absolute;
+      width: 500%;
+      top: 14px;
+      left: -495%;
+    }
+
+    &::after {
+      content: '';
+      height: 7px;
+      background-color: #fff;
+      border-radius: 8px;
+      position: absolute;
+      width: 400%;
+      top: 14px;
+      left: 34px;
+    }
+
+    &_success {
+      background-color: #FFA147;
+      color: $colorWhite;
+
+      &::before {
+        content: '';
+        height: 7px;
+        background: linear-gradient(81.55deg, #FFC83E 33.93%, #FF9F47 73.78%);
+        border-radius: 8px;
+        position: absolute;
+        top: 14px;
+        left: -390%;
+        width: 400%;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 132%;
+    text-align: center;
+    color: #45515F;
+    max-width: 220px;
+    width: 100%;
+    @include resetMargin;
+    margin-top: 20px;
+    cursor: default;
+
+    &_height_2-row {
+      max-width: 145px;
+    }
+  }
+}
