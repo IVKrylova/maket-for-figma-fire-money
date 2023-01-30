@@ -1,7 +1,29 @@
 .get-money {
+  @include gridColumns1fr;
+  padding: 60px 0;
+  background-image: url(../img/get-money-background.png);
+  position: relative;
+
+  &__text {
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 133.5%;
+    color: #536473;
+    @include resetMargin;
+    max-width: 1280px;
+    width: 100%;
+    text-align: left;
+
+    &:first-of-type {
+      margin-top: 26px;
+    }
+  }
 
   &__img {
-    max-width: 1920px;
+    max-width: 633px;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 17%;
   }
 }
