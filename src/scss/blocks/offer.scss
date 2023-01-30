@@ -1,0 +1,67 @@
+.offer {
+  box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  @include whiteRectangle;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 36px 73px 35px 64px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+
+  &__type {
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 182%;
+    text-transform: uppercase;
+    color: $colorWhite;
+    transform: rotate(-45deg);
+    padding: 0 40px;
+    left: -29px;
+    top: 14px;
+
+    &_background_lite {
+      background-color: #FFC83E;
+    }
+
+    &_background_basic {
+      background-color: #FF7B00;
+    }
+
+    &_background_pro {
+      background-color: #FA5914;
+    }
+  }
+
+  &__credit {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    @include resetMargin;
+    color: rgba(69, 81, 95, 1);
+  }
+
+  &__sum,
+  &__time-num {
+    color: rgba(255, 200, 62, 1);
+  }
+
+  &__description {
+    @include resetMargin;
+    margin-top: 14px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 182%;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__value {
+    font-weight: 500;
+  }
+}

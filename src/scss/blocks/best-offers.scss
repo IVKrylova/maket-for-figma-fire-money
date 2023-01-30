@@ -1,0 +1,25 @@
+.best-offers {
+  width: 100%;
+  background-color:  #F6F9FC;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  &__notice {
+    @include resetMargin;
+    margin-top: 33px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 145.5%;
+    color: #45515F;
+  }
+
+  &__list {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;
+    column-gap: 28px;
+    margin-top: 35px;
+  }
+}
