@@ -2,6 +2,7 @@ import * as utils from './modules/utils.js';
 import BestOffer from './components/BestOffer.js';
 import Section from './components/Section.js';
 import Review from './components/Review.js';
+import Faq from './components/Faq.js';
 import {
   inputRangeSumFormHeader,
   valueRangeSumFormHeader,
@@ -16,6 +17,9 @@ import {
   clientRejeckt,
   clientSuccess,
   clientPaid,
+  faqSelector,
+  faqTemplateSelector,
+  faqsListSelector,
 } from './modules/constants.js';
 import {
   bestOffers,
@@ -23,6 +27,7 @@ import {
   clientsRejeckt,
   clientsSuccess,
   clientsPaid,
+  faq,
 } from './modules/data.js';
 
 utils.isWebp();
@@ -105,3 +110,21 @@ const createClient = (data, clientElement, action) => {
 createClient(clientsRejeckt, clientRejeckt, 'rejeckt');
 createClient(clientsSuccess, clientSuccess, 'success');
 createClient(clientsPaid, clientPaid, 'paid');
+
+/* faq */
+const createFaq = data => {
+  const faqList = new Section({
+    items: data,
+    renderer: item => {
+      const faq = new Faq(item, faqSelector, faqTemplateSelector);
+
+      return faq.generateFaq();
+    }
+    },
+    faqsListSelector
+  );
+  faqList.renderItems();
+  return faqList;
+}
+
+createFaq(faq);

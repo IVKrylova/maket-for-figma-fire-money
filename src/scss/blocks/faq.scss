@@ -1,0 +1,75 @@
+.faq {
+  @include gridColumns1fr;
+  background-color: $bgGrey;
+  padding: 50px 0;
+  box-sizing: border-box;
+
+  &__list {
+    @include resetMargin;
+    margin-top: 37px;
+    list-style-type: none;
+    @include gridColumns1fr;
+    row-gap: 4px;
+  }
+
+  &__item {
+    max-width: 1280px;
+    width: 100%;
+    box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+    border-radius: 12px;
+    @include whiteRectangle;
+    position: relative;
+
+    &_bacfground_gradient {
+      background: linear-gradient(268.87deg, #FFC83E -5.09%, #FF7347 51.96%);
+    }
+  }
+
+  &__question {
+    @include resetMargin;
+    max-width: 356px;
+    width: 100%;
+    padding: 20px 980px 25px 33px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #45515F;
+
+    &_color_white {
+      color: $colorWhite;
+      padding-bottom: 0;
+    }
+  }
+
+  &__answer {
+    display: none;
+    @include resetMargin;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: $colorWhite;
+    margin: 17px auto 0 33px;
+    padding-bottom: 28px;
+
+    &_visible {
+      display: block;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/button-show-answer.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 15px;
+    right: 30px;
+    top: 31px;
+
+    &_pressed {
+      background-image: url(../img/button-hide-answer.svg);
+    }
+  }
+}

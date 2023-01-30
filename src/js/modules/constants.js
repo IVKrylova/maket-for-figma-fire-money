@@ -18,3 +18,8 @@ export const reviewsListSelector ='.reviews__list';
 export const clientRejeckt = document.querySelector('.clients__person_rejeckt');
 export const clientSuccess = document.querySelector('.clients__person_success');
 export const clientPaid = document.querySelector('.clients__person_paid');
+
+/* faq */
+export const faqSelector = '.faq__item';
+export const faqTemplateSelector = '#template-faq';
+export const faqsListSelector ='.faq__list';
