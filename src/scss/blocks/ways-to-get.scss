@@ -1,8 +1,6 @@
 .ways-to-get {
   @include whiteRectangle;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  @include gridColumns1fr;
   padding: 55px 0 45px;
   box-sizing: border-box;
 

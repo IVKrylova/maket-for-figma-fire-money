@@ -1,0 +1,17 @@
+.location {
+  display: flex;
+  column-gap: 8px;
+  margin-top: 20px;
+
+  &__icon {
+    display: block;
+  }
+
+  &__city {
+    @include resetMargin;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #93A0AB;
+  }
+}

@@ -8,3 +8,8 @@ export const valueRangeTimeFormHeader = document.querySelector('.form-credit__ra
 export const offerSelector = '.offer';
 export const offerTemplateSelector = '#template-best-offer';
 export const bestOffersListSelector ='.best-offers__list';
+
+/* reviews */
+export const reviewSelector = '.review';
+export const reviewTemplateSelector = '#template-review';
+export const reviewsListSelector ='.reviews__list';

@@ -1,6 +1,7 @@
 import * as utils from './modules/utils.js';
 import BestOffer from './components/BestOffer.js';
 import Section from './components/Section.js';
+import Review from './components/Review.js';
 import {
   inputRangeSumFormHeader,
   valueRangeSumFormHeader,
@@ -9,9 +10,13 @@ import {
   offerSelector,
   offerTemplateSelector,
   bestOffersListSelector,
+  reviewSelector,
+  reviewTemplateSelector,
+  reviewsListSelector,
 } from './modules/constants.js';
 import {
   bestOffers,
+  reviews,
 } from './modules/data.js';
 
 utils.isWebp();
@@ -48,3 +53,21 @@ const createBestOffers = data => {
 }
 
 createBestOffers(bestOffers);
+
+/* reviews */
+const createReview = data => {
+  const reviewsList = new Section({
+    items: data,
+    renderer: item => {
+      const review = new Review(item, reviewSelector, reviewTemplateSelector);
+
+      return review.generateReview();
+    }
+    },
+    reviewsListSelector
+  );
+  reviewsList.renderItems();
+  return reviewsList;
+}
+
+createReview(reviews);

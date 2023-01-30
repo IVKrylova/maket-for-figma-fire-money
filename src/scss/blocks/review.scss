@@ -1,0 +1,26 @@
+.review {
+  width: 100%;
+  max-width: 408px;
+  box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  border-radius: 22px;
+  padding: 50px 43px 47px;
+  box-sizing: border-box;
+
+  &__person {
+    @include resetMargin;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #45515F;
+    margin-top: 25px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #536473;
+    @include resetMargin;
+    margin: 17px auto 27px;
+  }
+}

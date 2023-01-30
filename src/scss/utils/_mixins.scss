@@ -7,3 +7,9 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
 }
+
+@mixin gridColumns1fr {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}

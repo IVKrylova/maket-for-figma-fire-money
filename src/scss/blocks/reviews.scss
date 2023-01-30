@@ -1,0 +1,19 @@
+.reviews {
+  background-color: $bgGrey;
+  @include gridColumns1fr;
+  padding: 65px 0 40px;
+
+  &__list {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;
+    column-gap: 28px;
+    margin: 40px auto 35px;
+  }
+
+  &__button-list {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;column-gap: 10px;
+  }
+}
