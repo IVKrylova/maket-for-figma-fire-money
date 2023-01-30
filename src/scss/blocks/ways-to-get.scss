@@ -1,0 +1,25 @@
+.ways-to-get {
+  @include whiteRectangle;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 55px 0 45px;
+  box-sizing: border-box;
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 145.5%;
+    color: #45515F;
+    @include resetMargin;
+    margin-top: 15px;
+  }
+
+  &__list {
+    @include resetMargin;
+    margin: 45px auto 30px;
+    list-style-type: none;
+    display: flex;
+    column-gap: 35px;
+  }
+}
