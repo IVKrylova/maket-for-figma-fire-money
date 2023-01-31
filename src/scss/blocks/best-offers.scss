@@ -4,6 +4,10 @@
   padding: 50px 0;
   @include gridColumns1fr;
 
+  @include media_435 {
+    padding-top: 39px;
+  }
+
   &__notice {
     @include resetMargin;
     margin-top: 33px;
@@ -11,6 +15,9 @@
     font-size: 13px;
     line-height: 145.5%;
     color: #45515F;
+    @include maxWidth(571px);
+    text-align: center;
+    cursor: default;
   }
 
   &__list {
@@ -19,5 +26,15 @@
     display: flex;
     column-gap: 28px;
     margin-top: 35px;
+
+    @include media_1280 {
+      flex-direction: column;
+      row-gap: 15px;
+      margin-top: 50px;
+    }
+
+    @include media_435 {
+      margin: 30px 0 25px;
+    }
   }
 }

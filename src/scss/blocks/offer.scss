@@ -10,6 +10,10 @@
   cursor: pointer;
   overflow: hidden;
 
+  @include media_435 {
+    padding: 36px 50px 35px 43px;
+  }
+
   &__type {
     position: absolute;
     font-weight: 500;
@@ -41,6 +45,10 @@
     line-height: 33px;
     @include resetMargin;
     color: rgba(69, 81, 95, 1);
+
+    @include media_435 {
+      font-size: 26px;
+    }
   }
 
   &__sum,
