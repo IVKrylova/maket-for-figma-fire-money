@@ -16,4 +16,8 @@
   max-width: 1280px;
   width: 100%;
   text-align: left;
+
+  @include media_1280 {
+    text-align: center;
+  }
 }

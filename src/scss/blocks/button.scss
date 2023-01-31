@@ -57,8 +57,11 @@
 
 .button_place_get-money {
   justify-self: start;
-  margin-left: 16.5%;
   margin-top: 26px;
+
+  @include media_1280 {
+    justify-self: center;
+  }
 }
 
 .button_place_footer {

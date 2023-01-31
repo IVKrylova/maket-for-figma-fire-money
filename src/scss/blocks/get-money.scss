@@ -1,8 +1,21 @@
 .get-money {
   @include gridColumns1fr;
-  padding: 60px 0;
-  background-image: url(../img/get-money-background.png);
+  padding: 60px 16.7%;
   position: relative;
+
+  @include media_1760 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @include media_1280 {
+    justify-content: center;
+    padding: 60px 0 0;
+  }
+
+  @include media_740 {
+    padding-top: 38px;
+  }
 
   &__text {
     font-weight: 400;
@@ -10,20 +23,49 @@
     line-height: 133.5%;
     color: #536473;
     @include resetMargin;
-    max-width: 1280px;
-    width: 100%;
+    @include maxWidth(1280px);
     text-align: left;
+    cursor: default;
 
     &:first-of-type {
       margin-top: 26px;
     }
+
+    @include media_1280 {
+      text-align: center;
+    }
+
+    @include media_740 {
+      font-size: 22px;
+      max-width: 340px;
+    }
   }
 
   &__img {
-    max-width: 633px;
-    width: 100%;
+    display: block;
+    height: 415px;
     position: absolute;
     bottom: 0;
-    right: 17%;
+    right: 12%;
+
+    @include media_1760 {
+      right: 0
+    }
+
+    @include media_1280 {
+      position: relative;
+      margin-top: 32px;
+      width: 720px;
+    }
+
+    @include media_740 {
+      margin-top: 0;
+      width: 360px;
+      object-fit: cover;
+    }
+
+    @include media_435 {
+      width: 340px;
+    }
   }
 }
