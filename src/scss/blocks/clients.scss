@@ -2,9 +2,16 @@
   @include gridColumns1fr;
   padding: 55px 0 65px;
   width: 100%;
-  background-image: url(../img/clients-background.png);
-  background-repeat: no-repeat;
+  @include backgroundImg('../img/clients-background.png');
   background-size: cover;
+
+  @include media_1760 {
+    padding-bottom: 60px;
+  }
+
+  @include media_810 {
+    padding: 32px 0 34px;
+  }
 
   &__list {
     @include resetMargin;
@@ -12,6 +19,10 @@
     display: flex;
     column-gap: 27px;
     margin-top: 37px;
+
+    @include media_1760 {
+      column-gap: 15px;
+    }
   }
 
   &__person {
@@ -23,6 +34,31 @@
     padding: 25px 36px 25px 75px;
     box-sizing: border-box;
     position: relative;
+    cursor: default;
+
+    @include media_1760 {
+      min-width: 376px;
+    }
+
+    @include media_810 {
+      min-width: 350px;
+    }
+
+    @include media_435 {
+      min-width: 340px;
+    }
+  }
+
+  &__person_paid {
+    @include media_1280 {
+      display: none;
+    }
+  }
+
+  &__person_success {
+    @include media_740 {
+      display: none;
+    }
   }
 
   &__icon {
