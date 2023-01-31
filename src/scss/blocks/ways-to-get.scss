@@ -4,6 +4,10 @@
   padding: 55px 0 45px;
   box-sizing: border-box;
 
+  @include media_740 {
+    padding: 35px 0 42px;
+  }
+
   &__subtitle {
     font-weight: 300;
     font-size: 13px;
@@ -11,6 +15,10 @@
     color: #45515F;
     @include resetMargin;
     margin-top: 15px;
+
+    @include media_740 {
+      margin-top: 23px;
+    }
   }
 
   &__list {
@@ -19,5 +27,18 @@
     list-style-type: none;
     display: flex;
     column-gap: 35px;
+
+    @include media_1280 {
+      margin-bottom: 45px;
+      column-gap: 15px;
+    }
+
+    @include media_740 {
+      margin: 30px auto 38px;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 18px;
+      justify-content: center;
+    }
   }
 }

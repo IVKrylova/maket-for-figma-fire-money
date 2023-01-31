@@ -9,12 +9,31 @@
   max-width: 140px;
   width: 100%;
 
+  @include media_1280 {
+    row-gap: 12px;
+  }
+
   &__logo {
     display: block;
     width: 100px;
     height: 54px;
-    object-fit: none;
+    object-fit: contain;
     margin: 35px 20px 0;
+
+    &_cach {
+      object-fit: none;
+    }
+
+    @include media_1280 {
+      width: 90px;
+      height: 48px;
+      margin-top: 32px;
+    }
+
+    @include media_740 {
+      widows: 72px;
+      height: 38px;
+    }
   }
 
   &__next-button {
@@ -26,8 +45,7 @@
     justify-self: center;
     background-color: transparent;
     border: none;
-    background-image: url(../img/button-arrow-right.svg);
-    background-repeat: no-repeat;
+    @include backgroundImg('../img/button-arrow-right.svg');
     background-size: contain;
   }
 }
