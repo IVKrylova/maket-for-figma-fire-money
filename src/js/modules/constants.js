@@ -23,3 +23,9 @@ export const clientPaid = document.querySelector('.clients__person_paid');
 export const faqSelector = '.faq__item';
 export const faqTemplateSelector = '#template-faq';
 export const faqsListSelector ='.faq__list';
+
+/* footer */
+export const creditorSelector = '.creditor';
+export const creditorTemplateSelector = '#template-creditor';
+export const creditorsListSelector = '.footer__creditors-list';
+export const currentYear = document.querySelector('.footer__current-year');

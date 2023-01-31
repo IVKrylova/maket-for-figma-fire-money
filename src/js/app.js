@@ -20,6 +20,10 @@ import {
   faqSelector,
   faqTemplateSelector,
   faqsListSelector,
+  creditorSelector,
+  creditorTemplateSelector,
+  creditorsListSelector,
+  currentYear,
 } from './modules/constants.js';
 import {
   bestOffers,
@@ -28,7 +32,9 @@ import {
   clientsSuccess,
   clientsPaid,
   faq,
+  creditors,
 } from './modules/data.js';
+import Creditor from './components/Creditor.js';
 
 utils.isWebp();
 
@@ -128,3 +134,24 @@ const createFaq = data => {
 }
 
 createFaq(faq);
+
+
+/* footer */
+const createCreditor = data => {
+  const creditorList = new Section({
+    items: data,
+    renderer: item => {
+      const creditor = new Creditor(item, creditorSelector, creditorTemplateSelector);
+
+      return creditor.generateCreditor();
+    }
+    },
+    creditorsListSelector
+  );
+  creditorList.renderItems();
+  return creditorList;
+}
+
+createCreditor(creditors);
+
+currentYear.textContent = new Date().getFullYear();

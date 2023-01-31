@@ -18,15 +18,12 @@
     </nav>
     <ul class="footer__contacts">
       <li class="footer__contact-item">
-        <a href="#" class="footer__contact-link">
-          <img src="./img/icon-email.svg" alt="Иконка email" class="footer__contact-icon">
-          <p class="footer__contact">ustohelp@gmail.com</p>
-        </a>
+        <img src="./img/icon-email.svg" alt="Иконка email" class="footer__contact-icon">
+        <a href="#" class="footer__contact-link">ustohelp@gmail.com</a>
       </li>
       <li class="footer__contact-item">
-        <a href="#" class="footer__contact-link">
           <img src="./img/icon-phone.svg" alt="Иконка телефон" class="footer__contact-icon">
-          <p class="footer__contact">8 800 808-00-80</p>
+          <a href="#" class="footer__contact-link footer__contact-link_tel">8 800 808-00-80</a>
         </a>
       </li>
     </ul>
@@ -82,21 +79,31 @@
     </p>
   </div>
   <div class="footer__footer">
-    <img src="./img/icon-age-limit.svg" alt="Возрастное ограничение 18+" class="footer__age-limit">
-    <p class="footer__copyright">
-      Imoneys Сredit `&copy;2015–<span class="footer__current-year"></span> Все права на сайт защищены.
-    </p>
-    <button class="button button_background_transparent" type="button">Все отзывы</button>
-    <ul class="footer__social-networks-list">
-      <li class="footer__network">
-        <img src="./img/icon-youtube.svg" alt="Иконка YouTube" class="footer__network-icon">
-      </li>
-      <li class="footer__network">
-        <img src="./img/icon-instagram.svg" alt="Иконка Instagram" class="footer__network-icon">
-      </li>
-      <li class="footer__network">
-        <img src="./img/icon-facebook.svg" alt="Иконка Facebook" class="footer__network-icon">
-      </li>
-    </ul>
+    <div class="footer__wrap-footer">
+      <img src="./img/icon-age-limit.svg" alt="Возрастное ограничение 18+" class="footer__age-limit">
+      <p class="footer__copyright">
+        Imoneys Сredit `&copy;2015–<span class="footer__current-year"></span> Все права на сайт защищены.
+      </p>
+    </div>
+    <div class="footer__wrap-footer">
+      <button class="button button_background_transparent button_place_footer" type="button">отписаться</button>
+      <ul class="footer__social-networks-list">
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-youtube.svg" alt="Иконка YouTube" class="footer__network-icon">
+          </a>
+        </li>
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-instagram.svg" alt="Иконка Instagram" class="footer__network-icon">
+          </a>
+        </li>
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-facebook.svg" alt="Иконка Facebook" class="footer__network-icon">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </footer>

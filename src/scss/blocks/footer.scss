@@ -1,0 +1,192 @@
+.footer {
+  color: $colorWhite;
+  background-image: url(../img/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include gridColumns1fr;
+  width: 100%;
+
+  &__header {
+    justify-content: space-between;
+    @include flexSection;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    padding-bottom: 37px;
+    box-sizing: border-box;
+
+    &::after {
+      @include lineAfter;
+    }
+  }
+
+  &__contacts {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;
+    column-gap: 50px;
+  }
+
+  &__contact-item {
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+  }
+
+  &__contact-icon {
+    display: block;
+    width: 20px;
+  }
+
+  &__contact-link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+    color: $colorWhite;
+
+    &_tel {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__creditors {
+    @include flexSection;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    @include resetMargin;
+  }
+
+  &__creditors-list {
+    @include resetMargin;
+    list-style-type: none;
+    margin-top: 23px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 28px;
+  }
+
+  &__info {
+    @include flexSection;
+    column-gap: 27px;
+    align-items: center;
+  }
+
+  &__cards-title {
+    @include resetMargin;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 118px;
+    width: 100%;
+    padding: 23px 0;
+    box-sizing: border-box;
+    position: relative;
+
+    &::after {
+      @include lineAfter;
+    }
+
+    &::before {
+      @include lineBefore;
+    }
+  }
+
+  &__cards-list {
+    @include resetMargin;
+    display: flex;
+    list-style-type: none;
+    column-gap: 6px;
+    box-sizing: border-box;
+    padding: 23px 40px 23px 0;
+    position: relative;
+    box-sizing: border-box;
+
+    &::after {
+      @include lineAfter;
+      width: calc(100% + 27px);
+    }
+
+    &::before {
+      @include lineBefore;
+      width: calc(100% + 27px);
+    }
+  }
+
+  &__card-logo {
+    display: block;
+    height: 40px;
+  }
+
+  &__privacy-policy {
+    @include resetMargin;
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  &__link-to-privacy-policy {
+    color: $colorWhite;
+    text-decoration: none;
+  }
+
+  &__terms {
+    @include flexSection;
+    flex-direction: column;
+    margin-top: 27px;
+    padding-bottom: 39px;
+    position: relative;
+
+    &::after {
+      @include lineAfter;
+    }
+  }
+
+  &__terms-item {
+    @include resetMargin;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    margin-top: 23px;
+  }
+
+  &__footer {
+    @include flexSection;
+    justify-content: space-between;
+  }
+
+  &__wrap-footer {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    margin: 18px 0 41px;
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__social-networks-list {
+    @include resetMargin;
+    list-style-type: none;
+    display: flex;
+    column-gap: 45px;
+    align-items: center;
+  }
+}
