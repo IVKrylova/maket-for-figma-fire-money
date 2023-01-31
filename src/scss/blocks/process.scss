@@ -9,30 +9,59 @@
     border: 1px solid rgba(69, 81, 95, 0.05);
     content: '';
     position: absolute;
-    max-width: 1280px;
-    width: 100%;
+    @include maxWidth(1280px);
     top: 0;
+
+    @include media_1760 {
+      display: none;
+    }
+  }
+
+  @include media_1280 {
+    padding: 30px 16px 70px;
+  }
+
+  @include media_740 {
+    padding: 25px 16px 50px;
   }
 
   &__list {
     @include resetMargin;
     list-style-type: none;
     display: grid;
-    max-width: 1280px;
-    width: 100%;
-    align-items: center;
+    @include maxWidth(1280px);
+    align-items: start;
     margin: 50px auto 40px;
     position: relative;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+
+    @include media_1280 {
+      @include maxWidth(650px);
+    }
+
+    @include media_740 {
+      grid-template-columns: 1fr;
+      row-gap: 80px;
+      margin: 94px auto 84px;
+    }
   }
 
   &__item {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    max-width: 248px;
-    width: 100%;
+    @include maxWidth(248px);
+
+    @include media_740 {
+      display: flex;
+      column-gap: 30px;
+      @include maxWidth(328px)
+    }
+
+    @include media_435 {
+      column-gap: 20px;
+    }
   }
 
   &__icon {
@@ -58,24 +87,37 @@
 
     &::before {
       content: '';
-      height: 7px;
-      background-color: #fff;
-      border-radius: 8px;
-      position: absolute;
+      @include lineProcess;
       width: 500%;
       top: 14px;
       left: -495%;
+
+      @include media_1280 {
+        width: 250%;
+        left: -215%;
+      }
+
+      @include media_740 {
+        @include lineProcess740;
+        top: -70px;
+      }
     }
 
     &::after {
-      content: '';
-      height: 7px;
-      background-color: #fff;
-      border-radius: 8px;
-      position: absolute;
+      @include lineProcess;
       width: 400%;
       top: 14px;
       left: 34px;
+
+      @include media_1280 {
+        width: 250%;
+        left: 34px;
+      }
+
+      @include media_740 {
+        @include lineProcess740;
+        top: 32px;
+      }
     }
 
     &_success {
@@ -83,14 +125,22 @@
       color: $colorWhite;
 
       &::before {
-        content: '';
-        height: 7px;
+        @include lineProcess;
         background: linear-gradient(81.55deg, #FFC83E 33.93%, #FF9F47 73.78%);
-        border-radius: 8px;
-        position: absolute;
         top: 14px;
-        left: -390%;
+        left: -385%;
         width: 400%;
+
+        @include media_1280 {
+          width: 250%;
+          left: -240%;
+        }
+
+        @include media_740 {
+          @include lineProcess740;
+          background: linear-gradient(100deg, #FFC83E 33.93%, #FF9F47 73.78%);
+          top: -70px;
+        }
       }
     }
   }
@@ -101,14 +151,18 @@
     line-height: 132%;
     text-align: center;
     color: #45515F;
-    max-width: 220px;
-    width: 100%;
+    @include maxWidth(220px);
     @include resetMargin;
     margin-top: 20px;
     cursor: default;
 
     &_height_2-row {
       max-width: 145px;
+    }
+
+    @include media_740 {
+      text-align: left;
+      max-width: 160px;
     }
   }
 }
