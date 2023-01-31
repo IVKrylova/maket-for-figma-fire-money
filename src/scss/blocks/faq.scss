@@ -4,21 +4,48 @@
   padding: 50px 0 80px;
   box-sizing: border-box;
 
+  @include media_1280 {
+    padding: 57px 0 67px;
+  }
+
+  @include media_810 {
+    padding: 35px 0;
+  }
+
   &__list {
     @include resetMargin;
     margin-top: 37px;
     list-style-type: none;
     @include gridColumns1fr;
     row-gap: 4px;
+
+    @include media_810 {
+      margin-top: 29px;
+    }
   }
 
   &__item {
-    max-width: 1280px;
-    width: 100%;
+    @include maxWidth(1280px);
     box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
     border-radius: 12px;
     @include whiteRectangle;
     position: relative;
+
+    @include media_1760 {
+      max-width: 1083px;
+    }
+
+    @include media_1280 {
+      max-width: 768px;
+    }
+
+    @include media_810 {
+      max-width: 360px;
+    }
+
+    @include media_435 {
+      max-width: 340px;
+    }
 
     &_bacfground_gradient {
       background: linear-gradient(268.87deg, #FFC83E -5.09%, #FF7347 51.96%);
@@ -27,13 +54,30 @@
 
   &__question {
     @include resetMargin;
-    max-width: 356px;
-    width: 100%;
-    padding: 20px 980px 25px 33px;
+    padding: 20px 890px 25px 33px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #45515F;
+    cursor: default;
+
+    @include media_1760 {
+      padding-right: 698px;
+    }
+
+    @include media_1280 {
+      padding-right: 384px;
+    }
+
+    @include media_810 {
+      font-size: 15px;
+      padding: 25px 79px 26px 18px;
+    }
+
+    @include media_435 {
+      font-size: 14px;
+      padding-right: 74px;
+    }
 
     &_color_white {
       color: $colorWhite;
@@ -50,9 +94,17 @@
     color: $colorWhite;
     margin: 17px auto 0 33px;
     padding-bottom: 28px;
+    box-sizing: border-box;
+    cursor: default;
+    padding-right: 80px;
 
     &_visible {
       display: block;
+    }
+
+    @include media_810 {
+      font-size: 14px;
+      margin: 14px auto 0 18px;
     }
   }
 
@@ -61,12 +113,12 @@
     box-sizing: border-box;
     background-color: transparent;
     border: none;
-    background-image: url(../img/button-show-answer.svg);
-    background-repeat: no-repeat;
+    @include backgroundImg('../img/button-show-answer.svg');
     width: 20px;
     height: 15px;
     right: 30px;
     top: 31px;
+    cursor: pointer;
 
     &_pressed {
       background-image: url(../img/button-hide-answer.svg);
