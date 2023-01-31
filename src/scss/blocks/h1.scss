@@ -7,4 +7,15 @@
   color: $colorWhite;
   width: 100%;
   margin: 20px 0 15px;
+  cursor: default;
+
+  @include media_1280 {
+    margin: 25px 0 5px;
+    font-size: 37px;
+    text-align: center;
+  }
+
+  @include media_810 {
+    font-size: 36px;
+  }
 }

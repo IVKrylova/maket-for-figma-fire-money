@@ -1,3 +1,9 @@
 .link-to-main-page {
   height: min-content;
 }
+
+.link-to-main-page_header {
+  @include media_740 {
+    grid-area: logo;
+  }
+}

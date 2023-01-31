@@ -1,0 +1,6 @@
+.logo-firemoney {
+  @include media_435 {
+    display: block;
+    width: 100px;
+  }
+}

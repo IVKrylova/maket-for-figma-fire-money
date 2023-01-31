@@ -1,11 +1,20 @@
 .menu {
+  @include maxWidth(472px);
+
   &__list-link {
     @include resetMargin;
     display: flex;
-    column-gap: 60px;
-    max-width: 472px;
-    width: 100%;
+    column-gap: 42px;
     list-style-type: none;
+    justify-content: center;
+
+    @include media_810 {
+      column-gap: 20px;
+    }
+
+    @include media_740 {
+      display: none;
+    }
   }
 
   &__link {
@@ -14,5 +23,9 @@
     line-height: 1.17;
     color: $colorWhite;
     text-decoration: none;
+
+    @include media_1280 {
+      font-size: 14px;
+    }
   }
 }

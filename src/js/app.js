@@ -24,6 +24,11 @@ import {
   creditorTemplateSelector,
   creditorsListSelector,
   currentYear,
+  creditForm,
+  headerWomanImg,
+  shiftHeaderWomanImg1280,
+  shiftHeaderWomanImg1920,
+  buttonHeader,
 } from './modules/constants.js';
 import {
   bestOffers,
@@ -36,7 +41,32 @@ import {
 } from './modules/data.js';
 import Creditor from './components/Creditor.js';
 
+/* img conversion */
 utils.isWebp();
+
+/* header */
+const calcLeftHeaderWomanImg = () => {
+  if (document.documentElement.clientWidth >= 1920) {
+    headerWomanImg.style.left = `37.5%`;
+  } else if (document.documentElement.clientWidth < 1920 && document.documentElement.clientWidth > 1280) {
+    const creditFormPosition = creditForm.getBoundingClientRect().left - shiftHeaderWomanImg1920;
+    headerWomanImg.style.left = `${creditFormPosition}px`;
+  } else if (document.documentElement.clientWidth <= 1280 && document.documentElement.clientWidth > 740) {
+    const creditFormPosition = creditForm.getBoundingClientRect().left - shiftHeaderWomanImg1280;
+    headerWomanImg.style.left = `${creditFormPosition}px`;
+  }
+}
+
+const createTextButtonHeader = () => {
+  if (document.documentElement.clientWidth <= 1280) buttonHeader.textContent = 'войти в кабинет';
+}
+calcLeftHeaderWomanImg();
+createTextButtonHeader();
+
+window.onresize = function() {
+  calcLeftHeaderWomanImg();
+  createTextButtonHeader();
+}
 
 /* form-credit */
 inputRangeSumFormHeader.addEventListener("change", function() {

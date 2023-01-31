@@ -1,8 +1,6 @@
 .main {
-  max-width: 1920px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  @include maxWidth(1920px);
+  @include gridColumns1fr;
   font-family: 'Rubika', Arial, Helvetica, sans-serif;
+  align-self: center;
 }

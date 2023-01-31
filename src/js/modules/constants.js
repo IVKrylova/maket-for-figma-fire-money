@@ -1,4 +1,11 @@
+/* header */
+export const headerWomanImg = document.querySelector('.header__woman-img');
+export const shiftHeaderWomanImg1920 = 453;
+export const shiftHeaderWomanImg1280 = 423;
+export const buttonHeader = document.querySelector('.button_header');
+
 /* form credit */
+export const creditForm = document.querySelector('.form-credit');
 export const inputRangeSumFormHeader = document.querySelector('.form-credit__range_sum');
 export const valueRangeSumFormHeader = document.querySelector('.form-credit__range-value_sum');
 export const inputRangeTimeFormHeader = document.querySelector('.form-credit__range_time');

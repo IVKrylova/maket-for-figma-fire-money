@@ -1,26 +1,63 @@
 .header {
-  background-image: url(../img/header-background.png);
-  background-repeat: no-repeat;
+  @include backgroundImg('../img/header-background.png');
   display: grid;
-  grid-template-areas:
-  'navigation navigation'
-  'title form-credit';
   position: relative;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   padding-bottom: 68px;
   box-sizing: border-box;
   background-size: cover;
   background-position-x: -70px;
+  padding: 32px 16.7% 68px;
+  justify-items: center;
+
+  @include media_1760 {
+    padding: 32px 5% 68px;
+  }
+
+  @include media_1280 {
+    padding: 29px 30px 21px;
+    background-position-x: -750px;
+  }
+
+  @include media_810 {
+    padding: 29px 16px 21px;
+  }
+
+  @include media_740 {
+    padding: 14px 10px 34px;
+  }
+
+  @include media_435 {
+    padding: 14px 6px 34px;
+  }
 
   &__navigation {
-    grid-area: navigation;
-    margin: 32px auto;
-    max-width: 1280px;
-    width: 100%;
+    @include maxWidth(1280px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media_740 {
+      display: grid;
+      grid-template-areas: 'logo button menu';
+      column-gap: 14px
+    }
+
+    @include media_435 {
+      column-gap: 8px
+    }
+  }
+
+  &__wrap {
+    @include maxWidth(1280px);
+    display: flex;
+    justify-content: space-between;
+
+    @include media_1280 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__title {
@@ -28,11 +65,20 @@
     grid-template-columns: 1fr;
     justify-items: start;
     height: min-content;
-    max-width: 480px;
-    width: 100%;
+    @include maxWidth(480px);
     justify-self: end;
     grid-area: title;
-    margin: 150px auto 0 33%;
+    margin: 150px 0 0;
+
+    @include media_1280 {
+      margin-top: 54px;
+      @include maxWidth(748px);
+      justify-items: center
+    }
+
+    @include media_740 {
+      margin-top: 28px;
+    }
   }
 
   &__title-button {
@@ -56,6 +102,29 @@
       left: 8px;
       bottom: 4px;
     }
+
+    @include media_740 {
+      width: 360px;
+      font-size: 20px;
+    }
+
+    @include media_435 {
+      width: 330px;
+      font-size: 18px;
+    }
+  }
+
+  &__wrap-subtitles {
+    @include media_1280 {
+      display: flex;
+      column-gap: 5px;
+      cursor: default;
+    }
+
+    @include media_740 {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__subtitle {
@@ -64,23 +133,57 @@
     font-size: 27px;
     line-height: 133.5%;
     color: $colorWhite;
+
+    @include media_810 {
+      font-size: 26px;
+    }
+
+    @include media_740 {
+      font-size: 20px;
+    }
   }
 
   &__notice {
+    cursor: default;
     font-weight: 300;
     font-size: 14px;
     line-height: 145.5%;
     @include resetMargin;
     color: $colorWhite;
     margin-top: 110px;
-    max-width: 300px;
-    width: 100%;
+    @include maxWidth(300px);
+
+    @include media_1280 {
+      margin-top: 10px;
+      @include maxWidth(590px);
+    }
+
+    @include media_740 {
+      text-align: center;
+    }
   }
 
   &__woman-img {
     position: absolute;
     bottom: 0;
-    left: 37%;
     z-index: 10;
+
+    @include media_1280 {
+      width: 530px;
+    }
+
+    @include media_740 {
+      display: none;
+    }
+  }
+
+  &__icon-burger-menu {
+    display: none;
+
+    @include media_740 {
+      display: block;
+      cursor: pointer;
+      grid-area: menu;
+    }
   }
 }

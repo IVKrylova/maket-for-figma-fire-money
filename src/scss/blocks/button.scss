@@ -10,9 +10,19 @@
   width: max-content;
   font-weight: 700;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 1.17;
   text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
   justify-self: center;
+  white-space: nowrap;
+
+  @include media_1280 {
+    font-size: 13px;
+  }
+
+  @include media_740 {
+    font-size: 12px;
+    padding: 12px 22px;
+  }
 }
 
 .button_gradient_false {
@@ -45,4 +55,10 @@
   color: #FEFEFE;
   padding-top: 13px;
   padding-bottom: 13px;
+}
+
+.button_header {
+  @include media_740 {
+    grid-area: button;
+  }
 }
