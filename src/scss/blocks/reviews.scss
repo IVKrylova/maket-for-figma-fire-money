@@ -3,17 +3,36 @@
   @include gridColumns1fr;
   padding: 65px 0 40px;
 
+  @include media_1280 {
+    padding-bottom: 54px;
+  }
+
   &__list {
     @include resetMargin;
     list-style-type: none;
     display: flex;
     column-gap: 28px;
     margin: 40px auto 35px;
+
+    @include media_1760 {
+      column-gap: 15px;
+    }
+
+    @include media_740 {
+      margin-bottom: 30px;
+    }
   }
 
   &__button-list {
     @include resetMargin;
     list-style-type: none;
-    display: flex;column-gap: 10px;
+    display: flex;
+    column-gap: 10px;
+
+    @include media_435 {
+      flex-direction: column;
+      row-gap: 13px;
+      align-items: center;
+    }
   }
 }

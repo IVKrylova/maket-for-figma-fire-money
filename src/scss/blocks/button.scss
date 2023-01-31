@@ -42,6 +42,17 @@
   font-size: 16px;
   line-height: 19px;
   color: #45515F;
+
+  @include media_1280 {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  @include media_740 {
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .button_place_get-money {

@@ -1,10 +1,29 @@
 .review {
-  width: 100%;
-  max-width: 408px;
+  @include maxWidth(408px);
   box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
   border-radius: 22px;
   padding: 50px 43px 47px;
   box-sizing: border-box;
+
+  @include media_1280 {
+    padding: 50px 28px 48px;
+    max-width: 377px;
+
+    &:nth-child(3n) {
+      display: none;
+    }
+  }
+
+  @include media_740 {
+    &:nth-child(2n) {
+      display: none;
+    }
+  }
+
+  @include media_810 {
+    padding: 31px 24px 41px;
+    max-width: 345px;
+  }
 
   &__person {
     @include resetMargin;
@@ -22,5 +41,13 @@
     color: #536473;
     @include resetMargin;
     margin: 17px auto 27px;
+
+    @include media_1280 {
+      margin-bottom: 23px;
+    }
   }
+}
+
+.review_hidden {
+  display: none;
 }

@@ -82,7 +82,6 @@ inputRangeTimeFormHeader.addEventListener("change", function() {
   }
 });
 
-
 /* best offer */
 const createBestOffers = data => {
   const bestOffersList = new Section({

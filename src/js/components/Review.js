@@ -8,6 +8,7 @@ export default class Review {
     this._text = data.text;
     this._rating = data.rating;
     this._location = data.location;
+    this._id = data.id;
   }
 
   _getReview() {
