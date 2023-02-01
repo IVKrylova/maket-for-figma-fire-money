@@ -4,3 +4,9 @@
     width: 100px;
   }
 }
+
+.logo-firemoney__footer {
+  @include media_740 {
+    width: 164px;
+  }
+}

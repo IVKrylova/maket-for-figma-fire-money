@@ -17,8 +17,7 @@
 
 @mixin flexSection {
   display: flex;
-  width: 1280px;
-  max-width: 100%;
+  width: 100%;
 }
 
 @mixin lineAfter {
@@ -66,6 +65,12 @@
 /* media queries */
 @mixin media_1760 {
   @media screen and (max-width: 1760px) {
+    @content;
+  }
+}
+
+@mixin media_1360 {
+  @media screen and (max-width: 1360px) {
     @content;
   }
 }

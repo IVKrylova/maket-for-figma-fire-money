@@ -7,3 +7,9 @@
     grid-area: logo;
   }
 }
+
+.link-to-main-page_footer {
+  @include media_1360 {
+    grid-area: logo;
+  }
+}

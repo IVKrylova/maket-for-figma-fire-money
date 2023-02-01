@@ -15,6 +15,18 @@
     @include media_740 {
       display: none;
     }
+
+    &_footer {
+      @include media_740 {
+        display: flex;
+      }
+
+      &::before {
+        @include media_740 {
+          @include lineBefore;
+        }
+      }
+    }
   }
 
   &__link {
@@ -26,6 +38,28 @@
 
     @include media_1280 {
       font-size: 14px;
+    }
+  }
+}
+
+.menu_footer {
+  @include media_1360 {
+    grid-area: menu;
+    justify-self: center;
+    position: relative;
+    padding-top: 30px;
+    max-width: 1280px;
+
+    @include media_740 {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    @include lineBefore;
+
+    @include media_740 {
+      display: none;
     }
   }
 }
