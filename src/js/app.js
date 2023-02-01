@@ -35,6 +35,8 @@ import {
   MAX_CREDIT_TIME,
   INITIAL_RANGE_TIME,
   SHIFT_RANGE_TIME,
+  SHIFT_RANGE_SUM_246,
+  SHIFT_RANGE_TIME_220,
 } from './modules/constants.js';
 import {
   bestOffers,
@@ -78,18 +80,31 @@ window.onresize = function() {
 valueRangeSumFormHeader.style.left = `${(INITIAL_RANGE_SUM / MAX_CREDIT_SUM * inputRangeSumFormHeader.clientWidth) - SHIFT_RANGE_SUM}px`
 inputRangeSumFormHeader.addEventListener("input", function() {
   const value = this.value.toString().slice(0, (this.value.length - 3)) + ' 000 ₽';
+  const coordinatesSum = (this.value / MAX_CREDIT_SUM * inputRangeSumFormHeader.clientWidth) - SHIFT_RANGE_SUM;
   valueRangeSumFormHeader.textContent = value;
-  valueRangeSumFormHeader.style.left = `${(this.value / MAX_CREDIT_SUM * inputRangeSumFormHeader.clientWidth) - SHIFT_RANGE_SUM}px`;
+
+  if (coordinatesSum > 246) {
+    valueRangeSumFormHeader.style.left = `${coordinatesSum - SHIFT_RANGE_SUM_246}px`;
+  } else {
+    valueRangeSumFormHeader.style.left = `${coordinatesSum}px`;
+  }
 });
 
 valueRangeTimeFormHeader.style.left = `${(INITIAL_RANGE_TIME / MAX_CREDIT_TIME * inputRangeTimeFormHeader.clientWidth - SHIFT_RANGE_TIME)}px`
 inputRangeTimeFormHeader.addEventListener("change", function() {
+  const coordinatesTime = (this.value / MAX_CREDIT_TIME * inputRangeTimeFormHeader.clientWidth) - SHIFT_RANGE_TIME;
+
   if (this.value === '3' || this.value === '4') {
     valueRangeTimeFormHeader.textContent = `${this.value} дня`;
   } else {
     valueRangeTimeFormHeader.textContent = `${this.value} дней`;
   }
-  valueRangeTimeFormHeader.style.left = `${(this.value / MAX_CREDIT_TIME * inputRangeTimeFormHeader.clientWidth) - SHIFT_RANGE_TIME}px`
+
+  if (coordinatesTime > 220) {
+    valueRangeTimeFormHeader.style.left = `${coordinatesTime - SHIFT_RANGE_TIME_220}px`
+  } else {
+    valueRangeTimeFormHeader.style.left = `${coordinatesTime}px`
+  }
 });
 
 /* best offer */

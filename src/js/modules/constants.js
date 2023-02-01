@@ -16,6 +16,8 @@ export const INITIAL_RANGE_SUM = 69000;
 export const MAX_CREDIT_TIME = 30;
 export const INITIAL_RANGE_TIME = 8;
 export const SHIFT_RANGE_TIME = 50;
+export const SHIFT_RANGE_SUM_246 = 40;
+export const SHIFT_RANGE_TIME_220 = 15;
 
 /* best offers */
 export const offerSelector = '.offer';
