@@ -4,12 +4,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   @include gridColumns1fr;
-  @include maxWidth(1280px);
+  /* @include maxWidth(1280px); */
+  width: 100%;
+  padding-left: 16.7%;
+  padding-right: 16.7%;
+  box-sizing: border-box;
 
-  @include media_1360 {
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+  @include media_1760 {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @include media_740 {
