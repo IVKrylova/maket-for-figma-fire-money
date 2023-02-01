@@ -51,7 +51,8 @@
     "build": "gulp build --build",
     "zip": "gulp deployZip --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprite": "gulp svgSprite"
+    "svgSprite": "gulp svgSprite",
+    "deployghp": "gh-pages -d dist"
   },
   "author": "IVKrylova",
   "license": "ISC"
