@@ -26,8 +26,8 @@ import {
   currentYear,
   creditForm,
   headerWomanImg,
-  shiftHeaderWomanImg1280,
-  shiftHeaderWomanImg1920,
+  SHIFT_HEADER_WOMAN_IMG_1280,
+  SHIFT_HEADER_WOMAN_IMG_1920,
   buttonHeader,
   MAX_CREDIT_SUM,
   INITIAL_RANGE_SUM,
@@ -55,10 +55,10 @@ const calcLeftHeaderWomanImg = () => {
   if (document.documentElement.clientWidth >= 1920) {
     headerWomanImg.style.left = `37.5%`;
   } else if (document.documentElement.clientWidth < 1920 && document.documentElement.clientWidth > 1280) {
-    const creditFormPosition = creditForm.getBoundingClientRect().left - shiftHeaderWomanImg1920;
+    const creditFormPosition = creditForm.getBoundingClientRect().left - SHIFT_HEADER_WOMAN_IMG_1920;
     headerWomanImg.style.left = `${creditFormPosition}px`;
   } else if (document.documentElement.clientWidth <= 1280 && document.documentElement.clientWidth > 740) {
-    const creditFormPosition = creditForm.getBoundingClientRect().left - shiftHeaderWomanImg1280;
+    const creditFormPosition = creditForm.getBoundingClientRect().left - SHIFT_HEADER_WOMAN_IMG_1280;
     headerWomanImg.style.left = `${creditFormPosition}px`;
   }
 }

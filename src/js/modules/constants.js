@@ -1,7 +1,7 @@
 /* header */
 export const headerWomanImg = document.querySelector('.header__woman-img');
-export const shiftHeaderWomanImg1920 = 453;
-export const shiftHeaderWomanImg1280 = 423;
+export const SHIFT_HEADER_WOMAN_IMG_1920 = 453;
+export const SHIFT_HEADER_WOMAN_IMG_1280 = 423;
 export const buttonHeader = document.querySelector('.button_header');
 
 /* form credit */
