@@ -21,12 +21,6 @@
       @include media_740 {
         display: flex;
       }
-
-      &::before {
-        @include media_740 {
-          @include lineBefore;
-        }
-      }
     }
 
     &_mobile {
@@ -69,10 +63,8 @@
   }
 
   &::before {
-    @include lineBefore;
-
-    @include media_740 {
-      display: none;
+    @include media_1360 {
+      @include lineBefore;
     }
   }
 }
