@@ -37,6 +37,8 @@ import {
   SHIFT_RANGE_TIME,
   SHIFT_RANGE_SUM_246,
   SHIFT_RANGE_TIME_220,
+  burgerMenu,
+  headerMenu,
 } from './modules/constants.js';
 import {
   bestOffers,
@@ -64,6 +66,15 @@ const calcLeftHeaderWomanImg = () => {
     headerWomanImg.style.left = `${creditFormPosition}px`;
   }
 }
+
+burgerMenu.addEventListener('click', () => {
+  if (headerMenu.closest('.menu__list-link_mobile')) {
+    headerMenu.classList.remove('menu__list-link_mobile');
+  } else {
+    headerMenu.classList.add('menu__list-link_mobile');
+  }
+
+});
 
 const createTextButtonHeader = () => {
   if (document.documentElement.clientWidth <= 1280) buttonHeader.textContent = 'войти в кабинет';

@@ -7,6 +7,7 @@
     column-gap: 42px;
     list-style-type: none;
     justify-content: center;
+    position: relative;
 
     @include media_810 {
       column-gap: 20px;
@@ -26,6 +27,18 @@
           @include lineBefore;
         }
       }
+    }
+
+    &_mobile {
+      display: flex;
+      position: absolute;
+      right: 20px;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 10px;
+      background: linear-gradient(81.55deg, #FF9F47 0%, #FFC83E 100%);
+      border-radius: 8px;
+      z-index: 10;
     }
   }
 

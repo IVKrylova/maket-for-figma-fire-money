@@ -3,6 +3,8 @@ export const headerWomanImg = document.querySelector('.header__woman-img');
 export const SHIFT_HEADER_WOMAN_IMG_1920 = 407;
 export const SHIFT_HEADER_WOMAN_IMG_1280 = 410;
 export const buttonHeader = document.querySelector('.button_header');
+export const burgerMenu = document.querySelector('.header__icon-burger-menu');
+export const headerMenu = document.querySelector('.menu__list-link_header');
 
 /* form credit */
 export const creditForm = document.querySelector('.form-credit');
