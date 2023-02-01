@@ -10,6 +10,12 @@ export const inputRangeSumFormHeader = document.querySelector('.form-credit__ran
 export const valueRangeSumFormHeader = document.querySelector('.form-credit__range-value_sum');
 export const inputRangeTimeFormHeader = document.querySelector('.form-credit__range_time');
 export const valueRangeTimeFormHeader = document.querySelector('.form-credit__range-value_time');
+export const MAX_CREDIT_SUM = 100000;
+export const SHIFT_RANGE_SUM = 27;
+export const INITIAL_RANGE_SUM = 69000;
+export const MAX_CREDIT_TIME = 30;
+export const INITIAL_RANGE_TIME = 8;
+export const SHIFT_RANGE_TIME = 50;
 
 /* best offers */
 export const offerSelector = '.offer';
