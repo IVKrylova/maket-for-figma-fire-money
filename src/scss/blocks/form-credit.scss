@@ -48,29 +48,62 @@
     width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-progress-appearance: none;
     appearance: none;
     outline: none;
     height: 7px;
     margin-top: 50px;
 
     &::-webkit-slider-runnable-track {
-      height: 7px;
-      background-color: #ECECEC;
-      border-radius: 8px;
+      @include rangeTrack;
+    }
+
+    &::-moz-range-track {
+      @include rangeTrack;
+    }
+
+    &::-ms-track {
+      @include rangeTrack;
     }
 
     &::-webkit-slider-thumb {
-      background: #ecf0f1;
-      cursor: pointer;
-      -webkit-appearance: none;
-      width: 21px;
-      height: 21px;
-      border-radius: 50%;
-      background-color: #FFA147;
-      margin-top: -7px;
-      background-image: url(../img/button-range.svg);
-      background-repeat: no-repeat;
-      background-position: center;
+      @include rangeThumb;
+    }
+
+    &::-moz-range-thumb {
+      @include rangeThumb;
+    }
+
+    &::-ms-thumb {
+      @include rangeThumb;
+    }
+  }
+
+  &__range_sum {
+    &::-webkit-slider-runnable-track {
+      background: var(--progress-sum);
+    }
+
+    &::-moz-range-track {
+      background: var(--progress-sum);
+    }
+
+    &::-ms-track {
+      background: var(--progress-sum);
+    }
+  }
+
+  &__range_time {
+    &::-webkit-slider-runnable-track {
+      background: var(--progress-time);
+    }
+
+    &::-moz-range-track {
+      background: var(--progress-time);
+    }
+
+    &::-ms-track {
+      background: var(--progress-time);
     }
   }
 

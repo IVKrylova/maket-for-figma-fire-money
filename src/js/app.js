@@ -77,6 +77,18 @@ window.onresize = function() {
 }
 
 /* form-credit */
+const changeProgressSum = (sum) => {
+  const value = sum / 99000 * 100;
+  document.documentElement
+    .style.setProperty('--progress-sum', `linear-gradient(81.55deg, #FFC83E 0%, #FF9F47 ${value}%, #ECECEC ${value}%, #ECECEC 100%)`);
+}
+
+const changeProgressTime = (time) => {
+  const value = (time - 3) / 27 * 100;
+  document.documentElement
+    .style.setProperty('--progress-time', `linear-gradient(81.55deg, #FFC83E 0%, #FF9F47 ${value}%, #ECECEC ${value}%, #ECECEC 100%)`);
+}
+
 valueRangeSumFormHeader.style.left = `${(INITIAL_RANGE_SUM / MAX_CREDIT_SUM * inputRangeSumFormHeader.clientWidth) - SHIFT_RANGE_SUM}px`
 inputRangeSumFormHeader.addEventListener("input", function() {
   const value = this.value.toString().slice(0, (this.value.length - 3)) + ' 000 ₽';
@@ -88,10 +100,12 @@ inputRangeSumFormHeader.addEventListener("input", function() {
   } else {
     valueRangeSumFormHeader.style.left = `${coordinatesSum}px`;
   }
+
+  changeProgressSum(this.value);
 });
 
 valueRangeTimeFormHeader.style.left = `${(INITIAL_RANGE_TIME / MAX_CREDIT_TIME * inputRangeTimeFormHeader.clientWidth - SHIFT_RANGE_TIME)}px`
-inputRangeTimeFormHeader.addEventListener("change", function() {
+inputRangeTimeFormHeader.addEventListener("input", function() {
   const coordinatesTime = (this.value / MAX_CREDIT_TIME * inputRangeTimeFormHeader.clientWidth) - SHIFT_RANGE_TIME;
 
   if (this.value === '3' || this.value === '4') {
@@ -105,6 +119,8 @@ inputRangeTimeFormHeader.addEventListener("change", function() {
   } else {
     valueRangeTimeFormHeader.style.left = `${coordinatesTime}px`
   }
+
+  changeProgressTime(this.value);
 });
 
 /* best offer */
