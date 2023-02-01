@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FIGMA | Макеты для верстки — Верстка страницы</title>
+	<meta name="description" content="Макет для верстки сайта был взял с телеграм канала FIGMA | Макеты для верстки">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+		<!-- Начало: Данный блок удалять нельзя -->
+		<style>
+			.maketforfigma{
+				flex: 0 0 auto;
+				/*background: #303b44;*/
+				/*background: #5CDB95;*/
+				background: #313a46;
+				font-weight: bold;
+				display: flex;
+			}
+			.maketforfigma img{
+				border-radius: 10px;
+				margin: 4px 0 0 4px;
+			}
+			.maketforfigma p {
+				/*color: #fff;*/
+				/*color: #05386B;*/
+				color: #98a6ad;
+				text-decoration: none;
+				letter-spacing: .01875rem;
+				font-size: .775rem;
+				padding: 0 10px;
+				line-height: 0.70rem;
+			}
+
+			.maketforfigma p > a {
+				/*color: #08ff00;*/
+				/*color: #EDF5E1;*/
+				color: #bbe4f0;
+				font-weight: bold;
+			}
+			.maketforfigma p > a:hover {
+				/*color: #ffa001*/
+				/*color: #379683*/
+				color: #ffffff
+			}
+
+			.main{
+				flex: 1 0 auto;
+			}
+
+			html{
+				height: 100%;
+			}
+
+			body{
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+		<div class="maketforfigma">
+			<a href="https://t.me/s/FigmaToHTML" target="_blank">
+				<img src="img/logo.png">
+			</a>
+			<div>
+				<p>
+					Данная верстка, была реализована пользователем в рамках обучающего телеграм канал <a href="https://t.me/s/FigmaToHTML/2" target="_blank">FIGMA | Макеты для верстки</a>
+				</p>
+				<p>
+					При помощи бота <a href="https://t.me/HtmlCodeForMoney_bot?from_git" target="_blank">FIGMA | 💵 Верстай за деньги</a> пользователь получил оплату за верстку этого сайта и попал в рейтинги сайта
+					<a href="https://maketforfigma.ru" target="_blank">FIGMA — Макеты для верстки</a>
+				</p>
+			</div>
+		</div>
+		<!-- Конец -->
+
+		<div class="main">
+			<header class="header">
+  <div class="header__navigation">
+    <a href="#" class="link-to-main-page link-to-main-page_header">
+      <img class="logo-firemoney" src="./img/logo-FireMoney.svg" alt="Логотип Fire Money">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list-link menu__list-link_header">
+        <li>
+          <a class="menu__link" href="#reviews">Почему мы?</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#about-servise">О сервисе</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#faq">Вопросы-ответы</a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="button button_header button_gradient_false">войти в личный кабинет</button>
+    <img class="header__icon-burger-menu" alt="Меню сайта" src="../img/icon-burger-menu.svg">
+  </div>
+  <div class="header__wrap">
+    <div class="header__title">
+      <button class="header__title-button" type="button">Горячие предложения</button>
+      <h1 class="h1">быстрых займов по всей России!</h1>
+      <div class="header__wrap-subtitles">
+        <p class="header__subtitle">Без проверки кредитной истории.</p>
+        <p class="header__subtitle">От 1 000 ₽ за 15 минут.</p>
+      </div>
+      <p class="header__notice">
+        Внимание! Услуга обработки заявки платная и составляет от 98 ₽ до 398 ₽ раз в неделю
+      </p>
+    </div>
+    <form class="form-credit" id="form-credit">
+  <label class="form-credit__label" for="sum">
+    <p class="form-credit__label-title">Cумма кредита</p>
+    <p class="form-credit__range-value form-credit__range-value_sum">
+      69 000 ₽
+    </p>
+    <input
+      step="1000"
+      type="range"
+      class="form-credit__range form-credit__range_sum"
+      id="sum"
+      min="1000"
+      max="100000"
+      value="69000"
+    >
+    <p class="form-credit__caption">
+      <span>1 000 ₽</span>
+      <span>100 000 ₽</span>
+    </p>
+  </label>
+  <label class="form-credit__label" for="time">
+    <p class="form-credit__label-title">Cрок кредита</p>
+    <p class="form-credit__range-value form-credit__range-value_time">
+      8 дней
+    </p>
+    <input
+      type="range"
+      step="1"
+      class="form-credit__range form-credit__range_time"
+      id="time"
+      min="3"
+      max="30"
+      value="8"
+    >
+    <p class="form-credit__caption">
+      <span>3</span>
+      <span>30</span>
+    </p>
+  </label>
+  <button type="submit" class="button">Оформить заявку</button>
+  <fieldset class="form-credit__calc">
+    <label class="form-credit__calc-label" for="credit">
+      <span class="form-credit__calc-label-title">Вы берете</span>
+      <input
+        type="text"
+        class="form-credit__calc-input"
+        id="credit"
+        value="20 000 ₽"
+        readonly
+      >
+    </label>
+    <label class="form-credit__calc-label" for="refund">
+      <span class="form-credit__calc-label-title">К возврату</span>
+      <input
+        type="text"
+        class="form-credit__calc-input"
+        id="refund"
+        value="25 650 ₽"
+        readonly
+      >
+    </label>
+    <label class="form-credit__calc-label" for="date">
+      <span class="form-credit__calc-label-title">Дата возврата</span>
+      <input
+        type="text"
+        class="form-credit__calc-input"
+        id="date"
+        value="08 января 2022"
+        readonly
+      >
+    </label>
+    <label class="form-credit__calc-label" for="payment">
+      <span class="form-credit__calc-label-title">Ежемесячный платеж</span>
+      <input
+        type="text"
+        class="form-credit__calc-input"
+        id="payment"
+        value="5 650 ₽"
+        readonly
+      >
+    </label>
+  </fieldset>
+</form>
+
+  </div>
+
+  <img class="header__woman-img" alt="Девушка с телефоном" src="./img/header-woman.png">
+</header>
+
+      <main class="content">
+        <section class="best-offers">
+  <h2 class="section-title">Лучшие предложения</h2>
+  <ul class="best-offers__list"></ul>
+  <p class="best-offers__notice">
+    * Расчёт не является публичное офертой и может отличаться от реальной ставки кредитора
+  </p>
+</section>
+
+        <section class="process">
+  <h2 class="section-title">Как получить деньги</h2>
+  <ul class="process__list">
+    <li class="process__item">
+      <img src="./img/icon-choose-sum.svg" alt="Иконка Выберите сумму займа" class="process__icon">
+      <p class="process__point process__point_success">1</p>
+      <p class="process__text process__text_height_2-row">Выберите сумму займа</p>
+    </li>
+    <li class="process__item">
+      <img src="./img/icon-form.svg" alt="Иконка Заполните анкету" class="process__icon">
+      <p class="process__point">2</p>
+      <p class="process__text process__text_height_2-row">Заполните анкету</p>
+    </li>
+    <li class="process__item">
+      <img src="./img/icon-review.svg" alt="Иконка Рассмотрение заявки" class="process__icon">
+      <p class="process__point">3</p>
+      <p class="process__text">Дождитесь рассмотрения заявки</p>
+    </li>
+    <li class="process__item">
+      <img src="./img/icon-money.svg" alt="Иконка Получите деньги" class="process__icon">
+      <p class="process__point">4</p>
+      <p class="process__text">Получите деньги любым удобным способом</p>
+    </li>
+  </ul>
+  <button class="button" type="button">Оформить заявку</button>
+</section>
+
+        <section class="ways-to-get">
+  <h2 class="section-title">Способы получения</h2>
+  <p class="ways-to-get__subtitle">
+    На карту  QIWI  Yandex Деньги  Наличные
+  </p>
+  <ul class="ways-to-get__list">
+    <li class="payment">
+      <img src="./img/icon-yandex-money.png" alt="Логотип Яндекс.Деньги" class="payment__logo">
+      <button class="payment__next-button" type="button" aria-label="Кнопка Далее"></button>
+    </li>
+    <li class="payment">
+      <img src="./img/icon-qiwi.png" alt="Логотип Qiwi" class="payment__logo">
+      <button class="payment__next-button" type="button" aria-label="Кнопка Далее"></button>
+    </li>
+    <li class="payment">
+      <img src="./img/icon-visa.png" alt="Логотип Visa" class="payment__logo">
+      <button class="payment__next-button" type="button" aria-label="Кнопка Далее"></button>
+    </li>
+    <li class="payment">
+      <img src="./img/icon-mastercard.png" alt="Логотип Master Card" class="payment__logo">
+      <button class="payment__next-button" type="button" aria-label="Кнопка Далее"></button>
+    </li>
+    <li class="payment">
+      <img src="./img/icon-cash.png" alt="Иконка Наличные" class="payment__logo payment__logo_cach">
+      <button class="payment__next-button" type="button" aria-label="Кнопка Далее"></button>
+    </li>
+  </ul>
+  <button class="button" type="button">Оформить заявку</button>
+</section>
+
+        <section class="reviews" id="reviews">
+  <h2 class="section-title">Почему выбирают нас</h2>
+  <ul class="reviews__list"></ul>
+  <ul class="reviews__button-list">
+    <li>
+      <button class="button" type="button">
+        Оформить заявку
+      </button>
+    </li>
+    <li>
+      <button class="button button_background_transparent button_color_dark" type="button">
+        Все отзывы
+      </button>
+    </li>
+  </ul>
+</section>
+
+        <section class="clients">
+  <h2 class="section-title section-title_color_white">Наши клиенты</h2>
+  <ul class="clients__list">
+    <li class="clients__person clients__person_rejeckt">
+      <img src="./img/icon-rejeckt.svg" alt="Иконка Получить отказ" class="clients__icon">
+      <p class="clients__name"></p>
+      <p class="clients__action"></p>
+      <div class="location location_place_clients">
+        <img class="location__icon" alt="Иконка Локация" src="./img/icon-location.svg">
+        <p class="location__city"></p>
+      </div>
+    </li>
+    <li class="clients__person clients__person_success">
+      <img src="./img/icon-success.svg" alt="Иконка Взять кредит" class="clients__icon">
+      <p class="clients__name"></p>
+      <p class="clients__action"></p>
+      <div class="location location_place_clients">
+        <img class="location__icon" alt="Иконка Локация" src="./img/icon-location.svg">
+        <p class="location__city"></p>
+      </div>
+    </li>
+    <li class="clients__person clients__person_paid">
+      <img src="./img/icon-paid.svg" alt="Иконка Внести сумму" class="clients__icon">
+      <p class="clients__name"></p>
+      <p class="clients__action"></p>
+      <div class="location location_place_clients">
+        <img class="location__icon" alt="Иконка Локация" src="./img/icon-location.svg">
+        <p class="location__city"></p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+        <section class="about-servise" id="about-servise">
+  <h2 class="section-title">О сервисе</h2>
+  <ul class="about-servise__list">
+    <li class="about-servise__item">
+      <h3 class="h3">Все возможные риски и убытки, и условия выдачи кредитов.</h3>
+      <p class="about-servise__text">
+        По вашим анкетным данным сервис автоматически выбирает наиболее выгодные
+        предложения и работает непосредственно с кредитными организациями,
+        предоставляющими микрозаймы В случае приобретения платной услуги, вы
+        получаете полный доступ к функциональности сервиса сроком на 1 год
+        с момента активации услуги!
+      </p>
+      <p class="about-servise__text">
+        Ваша заявка будет отправляться в МФО с наибольшей вероятностью одобрения
+        в данный момент времени с соблюдением необходимых пауз между отправками.
+        При предварительном одобрении кредитные организации сами связываются с вами,
+        и вам необходимо лишь подтвердить свое согласие на займ и забрать деньги.
+        Список МФО, в которые была отправлена ваша заявка, и другую необходимую
+        информацию о работе в рамках платной услуги вы можете наблюдать в личном
+        кабинете, в разделе Отчеты Стоимость услуги всего 1499 рублей. Для вашего
+        удобства оплата услуги происходит в рассрочку: четыре платежа по 374.8
+        рублей каждые пять дней. Оплачивая услугу, вы получаете доступ к
+        функциональности сервиса сроком на 1 год (365 дней) с момента активации услуги.
+      </p>
+      <p class="about-servise__text">
+        Если вы получили займ и более не нуждаетесь в услугах сервиса - вы можете
+        остановить обработку вашей заявки самостоятельно и в любое время в разделе
+        Отписаться от услуг.
+      </p>
+    </li>
+    <li class="about-servise__item">
+      <h3 class="h3">Что будет при просрочке</h3>
+      <p class="about-servise__text">
+        По вашим анкетным данным сервис автоматически выбирает наиболее выгодные
+        предложения и работает непосредственно с кредитными организациями,
+        предоставляющими микрозаймы В случае приобретения платной услуги, вы
+        получаете полный доступ к функциональности сервиса сроком на 1 год
+        с момента активации услуги!
+      </p>
+      <p class="about-servise__text">
+        Ваша заявка будет отправляться в МФО с наибольшей вероятностью одобрения
+        в данный момент времени с соблюдением необходимых пауз между отправками.
+        При предварительном одобрении кредитные организации сами связываются с вами,
+        и вам необходимо лишь подтвердить свое согласие на займ и забрать деньги.
+        Список МФО, в которые была отправлена ваша заявка, и другую необходимую
+        информацию о работе в рамках платной услуги вы можете наблюдать в личном
+        кабинете, в разделе Отчеты Стоимость услуги всего 1499 рублей. Для вашего
+        удобства оплата услуги происходит в рассрочку: четыре платежа по 374.8
+        рублей каждые пять дней. Оплачивая услугу, вы получаете доступ к
+        функциональности сервиса сроком на 1 год (365 дней) с момента активации услуги.
+      </p>
+      <p class="about-servise__text">
+        Если вы получили займ и более не нуждаетесь в услугах сервиса - вы можете
+        остановить обработку вашей заявки самостоятельно и в любое время в разделе
+        Отписаться от услуг.
+      </p>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+
+        <section class="faq" id="faq">
+  <h2 class="section-title">Вопросы-ответы</h2>
+  <ul class="faq__list"></ul>
+</section>
+
+        <section class="get-money">
+  <h2 class="section-title section-title_position_left">Получи деньги здесь и сейчас</h2>
+  <p class="get-money__text">Без проверки кредитной истории.</p>
+  <p class="get-money__text">От 1 000 ₽ за 15 минут.</p>
+  <button class="button button_place_get-money" type="button">Оформить заявку</button>
+  <img src="./img/get-money-woman.png" alt="Девушка с деньгами" class="get-money__img">
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__header">
+    <a href="#" class="link-to-main-page link-to-main-page_footer">
+      <img class="logo-firemoney logo-firemoney__footer" src="./img/logo-FireMoney.svg" alt="Логотип Fire Money">
+    </a>
+    <nav class="menu menu_footer">
+      <ul class="menu__list-link menu__list-link_footer">
+        <li>
+          <a class="menu__link" href="#">Почему мы?</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#">О сервисе</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#">Вопросы-ответы</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="footer__contacts">
+      <li class="footer__contact-item">
+        <img src="./img/icon-email.svg" alt="Иконка email" class="footer__contact-icon">
+        <a href="#" class="footer__contact-link">ustohelp@gmail.com</a>
+      </li>
+      <li class="footer__contact-item">
+          <img src="./img/icon-phone.svg" alt="Иконка телефон" class="footer__contact-icon">
+          <a href="#" class="footer__contact-link footer__contact-link_tel">8 800 808-00-80</a>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__creditors">
+    <h3 class="footer__subtitle">Список кредиторов</h3>
+    <ul class="footer__creditors-list"></ul>
+  </div>
+  <div class="footer__info">
+    <p class="footer__cards-title">Какие карты принимаем</p>
+    <ul class="footer__cards-list">
+      <li class="footer__card">
+        <img src="./img/icon-yandex-money.png" alt="Карта Яндекс.Деньги" class="footer__card-logo">
+      </li>
+      <li class="footer__card">
+        <img src="./img/icon-mastercard.png" alt="Карта Master Card" class="footer__card-logo">
+      </li>
+      <li class="footer__card">
+        <img src="./img/icon-mir.png" alt="Карта Мир" class="footer__card-logo">
+      </li>
+    </ul>
+    <p class="footer__privacy-policy">
+      Мы явлемся обработчиками
+      <a href="#" class="footer__link-to-privacy-policy">персональных данных</a>
+    </p>
+  </div>
+  <div class="footer__terms">
+    <h3 class="footer__subtitle">Соглашения и условия</h3>
+    <p class="footer__terms-item">
+      Займы и кредиты предоставляются партнерами Imoneys Сredit на сумму от 3 000 до
+      1 000 000 рублей включительно на срок от 13 до 260 недель. Проценты за пользование
+      денежных средств составляют от 40 до 360 процентов годовых. Расчетная сумма
+      (основной долг и проценты) к возврату от 500 до 250 000 рублей. Условия актуальны
+      на 01.06.2021 и не являются публичной офертой. Пример расчета общей стоимости займа:
+      заём на 15 000 руб. и сроком 25 недель; проценты за весь период составят 5 000 руб.
+      Итого ПСК 264,392 %. За услуги сервиса может быть взята плата в размере от 48 до
+      446 руб. за активацию сервиса.
+    </p>
+    <p class="footer__terms-item">
+      В случае невозвращения в условленный срок суммы кредита или суммы процентов за
+      пользование заёмными средствами кредитор вынуждено начислит штраф за просрочку
+      платежа. Большинство кредиторов идут на уступки и дают 3 дополнительных рабочих
+      дня для оплаты. Они предусмотрены на случай, к примеру, если банковский перевод
+      занял больше времени, чем обычно. Однако, в случае неполучения от Вас какой-либо
+      реакции в течение продолжительного времени, будет начислен штраф за просрочку срока
+      погашения размером в среднем 0,10% от первоначальной суммы для займов, 0,03% от суммы
+      задолженности в среднем для потребительских кредитов и кредитных карт. При несоблюдении
+      Вами условий по погашению кредитов и займов, данные о Вас могут быть переданы в реестр
+      должников или БКИ, что негативно может сказаться на Вашей кредитной истории и рейтинге
+      кредитоспособности. Рекомендуем Вам вносить платеж в день получения данных напоминаний.
+      Погашая задолженность в срок, Вы формируете хорошую кредитную историю, что повышает Ваш
+      рейтинг кредитоспособности и шансы в дальнейшем получить кредит на более выгодных условиях.
+    </p>
+  </div>
+  <div class="footer__footer">
+    <div class="footer__wrap-footer">
+      <img src="./img/icon-age-limit.svg" alt="Возрастное ограничение 18+" class="footer__age-limit">
+      <p class="footer__copyright">
+        Imoneys Сredit `&copy;2015–<span class="footer__current-year"></span> Все права на сайт защищены.
+      </p>
+    </div>
+    <div class="footer__wrap-footer">
+      <button class="button button_background_transparent button_place_footer" type="button">отписаться</button>
+      <ul class="footer__social-networks-list">
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-youtube.svg" alt="Иконка YouTube" class="footer__network-icon">
+          </a>
+        </li>
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-instagram.svg" alt="Иконка Instagram" class="footer__network-icon">
+          </a>
+        </li>
+        <li class="footer__network">
+          <a class="footer__link-to-network" href="#">
+            <img src="./img/icon-facebook.svg" alt="Иконка Facebook" class="footer__network-icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      <template id="template-best-offer">
+  <li class="best-offers__item offer">
+    <div class="offer__type"></div>
+    <p class="offer__credit">
+      <span class="offer__sum"></span> на <span class="offer__time-num"></span> <span class="offer__time-str"></span>
+    </p>
+    <p class="offer__description">
+      <img class="offer__icon" src="./img/icon-return-date.svg" alt="Иконка Дата возврата ">
+      <span class="offer__text">Дата возврата: </span><span class="offer__value offer__value_date"></span>
+    </p>
+    <p class="offer__description">
+      <img class="offer__icon" src="./img/icon-return-sum.svg" alt="Иконка Сумма возврата">
+      <span class="offer__text">К возврату: </span><span class="offer__value offer__value_sum"></span>
+    </p>
+  </li>
+</template>
+
+      <template id="template-review">
+  <li class="review">
+    <img class="review__photo" alt="Фотография" src="#">
+    <p class="review__person"></p>
+    <div class="location">
+      <img class="location__icon" alt="Иконка Локация" src="./img/icon-location.svg">
+      <p class="location__city"></p>
+    </div>
+    <p class="review__text"></p>
+    <img class="review__rating" alt="Оценка клиента" src="#">
+  </li>
+</template>
+
+      <template id="template-creditor">
+  <li class="creditor"></li>
+</template>
+
+      <template id="template-faq">
+  <li class="faq__item">
+    <p class="faq__question"></p>
+    <p class="faq__answer"></p>
+    <button class="faq__button" type="button" aria-label="Кнопка показать ответ"></button>
+  </li>
+</template>
+
+      <script src="js/app.min.js"></script>
+		</div>
+</body>
+</html>
