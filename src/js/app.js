@@ -55,7 +55,7 @@ utils.isWebp();
 /* header */
 const calcLeftHeaderWomanImg = () => {
   if (document.documentElement.clientWidth >= 1920) {
-    headerWomanImg.style.left = `37.5%`;
+    headerWomanImg.style.left = `39.5%`;
   } else if (document.documentElement.clientWidth < 1920 && document.documentElement.clientWidth > 1280) {
     const creditFormPosition = creditForm.getBoundingClientRect().left - SHIFT_HEADER_WOMAN_IMG_1920;
     headerWomanImg.style.left = `${creditFormPosition}px`;
